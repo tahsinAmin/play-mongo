@@ -5,6 +5,10 @@ const playersSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  jno: {
+    type: Number,
+    required: true,
+  },
   height: {
     type: Number,
     required: true,
@@ -29,7 +33,7 @@ const playersSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
-  mediaUrl: {
+  media: {
     type: String,
     required: true,
   },
