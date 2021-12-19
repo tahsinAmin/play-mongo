@@ -20,11 +20,9 @@ export default function Home({ players }) {
           />
         </div>
         <div className='p-5'>
-          <a href='#'>
-            <h5 className='text-gray-900 font-bold text-2xl tracking-tight mb-2 dark:text-white'>
-              Noteworthy technology acquisitions 2021
-            </h5>
-          </a>
+          <h5 className='text-gray-900 font-bold text-2xl tracking-tight mb-2 dark:text-white'>
+            {player.name}
+          </h5>
           <p className='font-normal text-gray-700 mb-3 dark:text-gray-400'>
             <span className='font-bold'>PPG</span> {player.ppg}
           </p>
@@ -52,7 +50,7 @@ export default function Home({ players }) {
       </div>
     );
   });
-  console.log(players);
+  console.log(players[0].mediaUrl[2]);
   return (
     <div className='min-h-screen'>
       <Head>
@@ -63,17 +61,7 @@ export default function Home({ players }) {
       <main className='flex flex-wrap md:space-x-2 space-y-2 md:space-y-0'>
         {playerList}
       </main>
-      <footer className='flex items-center justify-center w-full h-24 border-t'>
-        <a
-          className='flex items-center justify-center'
-          href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Powered by{" "}
-          <img src='/vercel.svg' alt='Vercel Logo' className='h-4 ml-2' />
-        </a>
-      </footer>
+      <footer className='flex items-center justify-center w-full h-24 border-t'></footer>
     </div>
   );
 }

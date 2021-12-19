@@ -141,7 +141,11 @@ export default function Player({ player }) {
                     <div className='text-center flex justify-center items-center'>
                       <div className='relative h-36 w-full cursor-pointer my-auto'>
                         <Image
-                          src='/img/4.png'
+                          src={player.mediaUrl[2]}
+                          // onError={(e) => {
+                          //   e.target.onerror = null;
+                          //   e.target.src = "/img/4.png";
+                          // }}
                           layout='fill'
                           objectFit='cover'
                           className=''
@@ -151,8 +155,8 @@ export default function Player({ player }) {
                     <div className='relative'>
                       <div className='paul absolute z-40 scale-125 -translate-y-24 h-[568px] w-[420px] cursor-pointer my-auto'>
                         <Image
-                          src='/img/sc2.png'
-                          // src={player.media}
+                          // src='/img/sc2.png'
+                          src={player.mediaUrl[1]}
                           layout='fill'
                           objectFit='cover'
                           className=' absolute'
